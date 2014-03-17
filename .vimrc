@@ -8,7 +8,6 @@ set shiftwidth=4
 set backspace=indent,eol,start
 
 "No more bells
-set visualbell
 set noerrorbells
 
 "Save on change
@@ -16,17 +15,22 @@ set autowrite
 
 execute pathogen#infect()
 syntax on
-"Easier window navigation
 
+"Easier window navigation
+" Hacks for windows terminals
 nmap <ESC>[D <C-LEFT>
 nmap <ESC>[C <C-RIGHT>
 nmap <ESC>[B <C-DOWN>
 nmap <ESC>[A <C-UP>
-"[D
+"Commands for 'real' terminals
 nmap <C-LEFT> <C-w>h
 nmap <C-DOWN> <C-w>j
 nmap <C-UP> <C-w>k
 nmap <C-RIGHT> <C-w>l
+
+"Splits
+nmap vs :vsplit<cr>
+nmap sp :split<cr>
 
 
 filetype plugin indent on
